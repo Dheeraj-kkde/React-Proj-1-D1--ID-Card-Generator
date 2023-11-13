@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Id Card Generator</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <header>
+      <div class="bg-indigo-700 text-white py-2.5 text-center font-bold">
+        ID Card Generator
+      </div>
+    </header>
+    <section>
+      <div id="body-container" class="lg:flex">
+        <div id="user-details" class="lg:w-2/4">
+          <div id="form-elements-container" class="pt-10 lg:pl-16 pl-6">
+            <div class="text-indigo-600 text-xl">Enter Student Details</div>
+            <form>
+              <div class="flex flex-col w-60 mt-4">
+                <label for="student-name" class="font-semibold"
+                  >Enter Name</label
+                >
+                <input
+                  type="text"
+                  id="student-name"
+                  placeholder="Enter your name here"
+                  class="border"
+                />
+              </div>
+              <div class="flex flex-col w-60 mt-4">
+                <label for="college-name" class="font-semibold"
+                  >Enter College Name</label
+                >
+                <input
+                  type="text"
+                  id="college-name"
+                  placeholder="Enter college name here"
+                  class="border"
+                />
+              </div>
+              <div class="flex flex-col w-60 mt-4">
+                <label for="location-name" class="font-semibold"
+                  >Enter Location</label
+                >
+                <input
+                  type="text"
+                  id="location-name"
+                  placeholder="Enter location here"
+                  class="border"
+                />
+              </div>
+              <button
+                class="bg-indigo-700 text-white mt-4 px-3 py-1 rounded"
+                onclick="generateIdCard(event)"
+              >
+                Generate Card
+              </button>
+            </form>
+          </div>
+        </div>
+        <div id="generated-id-card" class="lg:w-2/4">
+          <div id="form-elements-containter" class="pt-10 lg:pl-16 pl-6">
+            <div class="text-indigo-600 text-xl">Generated ID Card</div>
+            <div
+              id="student-id-card"
+              class="border w-80 border-black h-48 rounded flex"
+            >
+              <div
+                id="student-image-container"
+                class="
+                  w-4/12
+                  id-card-image-background
+                  flex
+                  items-center
+                  justify-center
+                "
+              >
+                <span class="material-icons text-white text-8xl">
+                  account_circle
+                </span>
+              </div>
+              <div id="student-details-container" class="w-8/12 pt-4 pl-3">
+                <div>
+                  <span class="text-gray-400">Name:</span>
+                  <span id="generated-student-name">Joe</span>
+                </div>
+                <div class="mt-4">
+                  <span class="text-gray-400">College Name:</span>
+                  <span id="generated-college-name">Dev College</span>
+                </div>
+                <div class="mt-4">
+                  <span class="text-gray-400">Location:</span>
+                  <span id="generated-location-name">India</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./index.html"></script>
+  </body>
+</html>
